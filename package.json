@@ -1,0 +1,30 @@
+{
+  "name": "tanstack-launchpad-strapi-port",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A TanStack Start port of Strapi's LaunchPad frontend. Provisions the LaunchPad Strapi backend on setup.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "setup": "node --import tsx ./scripts/setup.mts",
+    "setup:backend": "node --import tsx ./scripts/fetch-backend.mts",
+    "seed": "node --import tsx ./scripts/seed.mts",
+    "dev": "node --import tsx ./scripts/dev.mts",
+    "check:env": "node --import tsx ./scripts/check-env.mts",
+    "client": "yarn --cwd client",
+    "strapi": "yarn --cwd strapi",
+    "build": "yarn --cwd client build",
+    "lint": "yarn --cwd client lint",
+    "typecheck": "yarn --cwd client typecheck",
+    "format": "yarn --cwd client format"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "tsx": "^4.19.2",
+    "wait-on": "^8.0.1"
+  },
+  "packageManager": "yarn@4.5.0",
+  "engines": {
+    "node": ">=20.19.0"
+  }
+}
